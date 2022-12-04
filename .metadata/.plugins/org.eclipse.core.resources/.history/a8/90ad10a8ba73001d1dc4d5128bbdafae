@@ -1,0 +1,5 @@
+package kr.co.intranet.view;
+
+public class GetSignListCtrl {
+
+}

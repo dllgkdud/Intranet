@@ -1,0 +1,10 @@
+package kr.co.intranet.dto;
+
+public class SignDTO {
+	//결재번호
+	private int sno;
+	//결재내용
+	private String content;
+	private int state;
+	
+}
