@@ -68,14 +68,13 @@
 						<table>
 							<tbody>
 								<tr>
-									<td>
-										<input type="text" name="title" id="title" placeholder="결재 제목 입력" class="input" maxlength="" required />
-									</td>
+									<td><input type="hidden" name="sno" id="sno" value=""></td>
 								</tr>
 								<tr>
-									<td>
-										<textarea cols="60" rows="20" name="content" id="content" placeholder="결재 내용 입력" class="input" maxlength="" style="resize: none;" required></textarea>
-									</td>
+									<td><input type="text" name="title" id="title" placeholder="결재 제목 입력" class="input" maxlength="100" required /></td>
+								</tr>
+								<tr>
+									<td><textarea cols="60" rows="20" name="content" id="content" placeholder="결재 내용 입력" class="input" maxlength="1000" style="resize: none;" required></textarea></td>
 								</tr>
 							</tbody>
 						</table>

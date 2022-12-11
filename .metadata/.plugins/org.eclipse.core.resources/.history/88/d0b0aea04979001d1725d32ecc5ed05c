@@ -1,0 +1,50 @@
+package kr.co.intranet.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.co.intranet.dto.SignDTO;
+import kr.co.intranet.model.SignDAO;
+
+@WebServlet("/AddSignCtrl.do")
+public class AddSignCtrl extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//UTF-8
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		//전달받은 데이터		
+		String sno = request.getParameter("sno");
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
+		String sid = request.getParameter("sid");
+		
+		
+		//외부데이터 추가
+		//TourDAO picture = new TourDAO();
+		//PicDTO pic = picture.getPic(tourno);
+		//TourDTO tour = picture.getPlace(tourno); 
+		//String imgURL = pic.getPicname();
+		
+		//DTO에 저장(데이터 저장값 반환할 때)
+		SignDTO dto = new SignDTO();
+		dto.setSno(sno);
+		dto.setTitle(title);
+		dto.setContent(content);
+		
+		//DAO에 저장(데이터)
+		SignDAO dao = new SignDAO();
+		
+		
+		//반환조건
+		response.sendRedirect("GetSignListCtrl.do");
+	}
+}

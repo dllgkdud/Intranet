@@ -1,8 +1,0 @@
-package kr.co.intranet.dto;
-
-public class SignDTO {
-	private int sno;
-	private String email;
-	private String state;
-	
-}

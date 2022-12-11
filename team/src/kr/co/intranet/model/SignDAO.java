@@ -43,5 +43,31 @@ public class SignDAO {
 		}
 		return signList;
 	}
-	
+
+	//결재처리
+	public int addSign(SignDTO dto) {
+		int cnt = 0;
+		try {	
+			conn = Oracle.getConnection();
+			pstmt = conn.prepareStatement(Oracle.SIGN_INSERT);
+			pstmt.setInt(1, dto.getSno());
+			pstmt.setString(2, dto.getTitle());
+			pstmt.setString(3, dto.getContent());
+			pstmt.setString(4, dto.getSid());
+			cnt = pstmt.executeUpdate();
+			
+		} catch(ClassNotFoundException e) {
+			System.out.println("드라이버 로딩에 실패했습니다.");
+			e.printStackTrace();
+		} catch(SQLException e) {
+			System.out.println("SQL구문이 정상적으로 처리되지 않았습니다.");
+			e.printStackTrace();
+		} catch(Exception e) {
+			System.out.println("잘못된 연산 및 요청으로 목록을 불러오지 못했습니다.");
+			e.printStackTrace();
+		} finally {
+			Oracle.close(pstmt, conn);
+		}
+		return cnt;
+	}	
 }
