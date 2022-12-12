@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Bootstrap css js jquery-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="./assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="./assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="./assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="./assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- Include Jquery -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+      td { color: white; }
+      .wrapss:after { content:""; display:block; clear:both; }
+      .wrapss { display:none; }
+      .wrapss:target { display:block; }
+    </style>
+</head>
+<body style="background-color: black;">
+      <!-- 헤더 -->
+      <nav class="navbar navbar-expand-lg navbar-light text-white" style="background-color: rgb(20, 22, 29);">
+        <ul class="navbar-nav mr-auto" > 
+            <li class="nav-item" style="list-style: none;">
+                <a class="nav-link" href="mail.html" style="color: rgba(232, 230, 227, 0.5);">전자메일</a>
+            </li>
+            <li class="nav-item" style="list-style: none;">
+                <a class="nav-link" href="approval.html" style="color: rgba(232, 230, 227, 0.5);">전자결제</a>
+            </li>
+            <li class="nav-item" style="list-style: none;">
+                <a class="nav-link" href="board.html" style="color: rgba(232, 230, 227, 0.5);">게시판</a>
+            </li>
+            <li class="nav-item" style="list-style: none;">
+                <a class="nav-link" href="board2.html" style="color: rgba(232, 230, 227, 0.5);">자료실</a>
+            </li>
+            <li class="nav-item" style="list-style: none;">
+                <a class="nav-link" href="reservation.html" style="color: rgba(232, 230, 227, 0.5);">예약서비스</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav" style="margin-right:250px;">
+          <li class="nav-item" style="list-style: none;">
+              <span class="nav-link" style="color: rgba(232, 230, 227, 0.5);">${sid }님 안녕하세요</span>
+          </li>
+          <li class="nav-item" style="list-style: none;">
+              <a class="nav-link" href="#" style="color: rgba(232, 230, 227, 0.5);">로그아웃</a>
+          </li>
+          <li class="nav-item" style="list-style: none;">
+              <a class="nav-link" href="mypage.html" style="color: rgba(232, 230, 227, 0.5);">인사정보</a>
+          </li>
+          <li class="nav-item" style="list-style: none;">
+            <a class="nav-link" href="sitemap.html" style="color: rgba(232, 230, 227, 0.5);">사이트맵</a>
+        </li>
+        </ul>
+      </nav>
+      <!-- 사이드바 -->
+      <div class="container-scroller">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+            <a class="sidebar-brand brand-logo" href="index.html"><img src="./img/logo.png" alt="logo" style="width:80px; height:75px; margin-left: 55px; margin-top: 45px;"/></a>
+            <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="./assets/images/logo-mini.svg" alt="logo" /></a>
+          </div>
+          <ul class="nav">
+            <li class="nav-item profile">
+              <div class="profile-desc">
+                <div class="profile-pic">
+                  <div class="count-indicator">
+                    <img class="img-xs rounded-circle " src="https://cdn-icons-png.flaticon.com/512/4623/4623635.png" alt="">
+                    <span class="count bg-success"></span>
+                  </div>
+                  <div class="profile-name">
+                    <h5 class="mb-0 font-weight-normal">KIM</h5>
+                    <span>관리자 계정</span>
+                  </div>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                  <a href="#" class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-settings text-primary"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-onepassword  text-info"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-calendar-today text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item nav-category">
+              <span class="nav-link">현재 페이지 기능</span>
+            </li>
+            <li class="nav-item menu-items">
+              <a class="nav-link" href="mypage.html#page1">
+                <span class="menu-icon">
+                  <i class="mdi mdi-speedometer"></i>
+                </span>
+                <span class="menu-title">인사정보</span>
+              </a>
+            </li>
+            <li class="nav-item menu-items">
+              <a class="nav-link" href="mypage.html#page2">
+                <span class="menu-icon">
+                  <i class="mdi mdi-playlist-play"></i>
+                </span>
+                <span class="menu-title">개인정보</span>
+              </a>
+            </li>
+            <li class="nav-item menu-items">
+              <a class="nav-link" href="mypage.html#page3">
+                <span class="menu-icon">
+                  <i class="mdi mdi-table-large"></i>
+                </span>
+                <span class="menu-title">변경신청</span>
+              </a>
+            </li>
+          </ul>
+          <!-- page1 -->
+          <nav class="navbar navbar-light wrapss" id="page1" style="position: absolute; margin-top: -300px; margin-left: 110px; width: 2000x;" >
+            <table class="table">
+                <h1 style="margin: 11px;">인사정보</h1>
+                <tr>
+                    <th>이름</th>
+                    <td>한태헌</td>
+                    <th>이름(영문)</th>
+                    <td>HAN TAE HUN</td>
+                </tr>
+                <tr>
+                    <th style="width: 100px;">주민등록번호</th>
+                    <td>000717-3000000</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px;">소속</th>
+                    <td>지구</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>직위</th>
+                    <td>노예</td>
+                    <th>취업일</th>
+                    <td>2022-12-11</td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td>010-1004-1004</td>
+                    <th>Email</th>
+                    <td>dan@naver.com</td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td>일산</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                  <th>결혼</th>
+                  <td>X</td>
+                  <th>병역유무</th>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <th>자격증</th>
+                  <td>X</td>
+                  <th></th>
+                  <td></td>
+                </tr>
+            </table>
+            <div class="carousel slide" data-bs-ride="carousel" style="position: absolute; margin-left: 600px; margin-top: -431px;">
+              <div class="carousel-item active">
+                <img src="https://ovenapp.io/static/images/shape/wireframe.svg" class="d-block" alt="..." width="400px" height="300px">
+              </div>
+            </div>
+          </nav>
+          <!-- page2 -->
+          <nav class="navbar navbar-light wrapss" id="page2" style="position: absolute; margin-top: -300px; margin-left: 110px; width: 2000x;" >
+            <table class="table">
+                <h1 style="margin: 11px;">개인정보</h1>
+                <tr>
+                    <th>이름</th>
+                    <td>한태헌</td>
+                    <th>이름(영문)</th>
+                    <td>HAN TAE HUN</td>
+                </tr>
+                <tr>
+                    <th style="width: 100px;">주민등록번호</th>
+                    <td>000717-3000000</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px;">소속</th>
+                    <td>지구</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>직위</th>
+                    <td>노예</td>
+                    <th>취업일</th>
+                    <td>2022-12-11</td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td>010-1004-1004</td>
+                    <th>Email</th>
+                    <td>dan@naver.com</td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td>일산</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                  <th>결혼</th>
+                  <td>X</td>
+                  <th>병역유무</th>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <th>자격증</th>
+                  <td>X</td>
+                  <th></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>최종학력</th>
+                  <td>~대학교</td>
+                  <th></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>장애</th>
+                  <td>X</td>
+                  <th>보훈</th>
+                  <td>X</td>
+                </tr>
+            </table>
+            <div  class="carousel slide" data-bs-ride="carousel" style="position: absolute; margin-left: 600px; margin-top: -521px;">
+              <div class="carousel-item active">
+                <img src="https://ovenapp.io/static/images/shape/wireframe.svg" class="d-block" alt="..." width="400px" height="300px">
+              </div>
+            </div>
+          </nav>
+          <!-- page3 -->
+          <form action="">
+            <nav class="navbar navbar-light wrapss" id="page3" style="position: absolute; margin-top: -300px; margin-left: 110px; width: 2000x;" >
+              <table class="table">
+                  <h1 style="margin: 11px;">인사정보 변경신청</h1>
+                  <tr>
+                      <th>이름</th>
+                      <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                      <th>이름(영문)</th>
+                      <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                  </tr>
+                  <tr>
+                      <th style="width: 100px;">주민등록번호</th>
+                      <td>000717-3000000</td>
+                      <th></th>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th style="width: 100px;">소속</th>
+                      <td>지구</td>
+                      <th></th>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th>직위</th>
+                      <td>노예</td>
+                      <th>취업일</th>
+                      <td>2022-12-11</td>
+                  </tr>
+                  <tr>
+                      <th>연락처</th>
+                      <td>010-1004-1004</td>
+                      <th>Email</th>
+                      <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                  </tr>
+                  <tr>
+                      <th>주소</th>
+                      <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                      <th></th>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <th>결혼</th>
+                    <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    <th>병역유무</th>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <th>자격증</th>
+                    <td>X</td>
+                    <th></th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>최종학력</th>
+                    <td>~대학교</td>
+                    <th></th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>장애</th>
+                    <td>X</td>
+                    <th>보훈</th>
+                    <td>X</td>
+                  </tr>
+              </table>
+              <div  class="carousel slide" data-bs-ride="carousel" style="position: absolute; margin-left: 600px; margin-top: -558px;">
+                <div class="carousel-item active">
+                  <img src="https://ovenapp.io/static/images/shape/wireframe.svg" class="d-block" alt="..." width="400px" height="300px">
+                </div>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="position: absolute; width: 200px; height: 30px; margin-top: 30px; margin-left: -150px;">
+                <input class="btn btn-github me-md-2" type="submit" style="margin-right: 10px;"  href="insertmail.html" value="변경">
+              </div>
+            </nav>
+            
+          </form>
+      </div>  
+</body>
+</html>
