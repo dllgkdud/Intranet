@@ -7,12 +7,14 @@ create table sign (
 	content varchar2(1000),
 	sid varchar2(50),
 	state number default 0,
-	regdate varchar2(50)
+	regdate date default sysdate
 );
+
 -- sno 자동 증가 시퀀스 생성
 create sequence sseq start with 1 increment by 1;
 drop sequence sseq;
 
 -- sign table
-insert into sign(sno, title, content) values(sseq.nextval, 'title', 'content');
-select * from sign;
+insert into sign values(sseq.nextval, 'title', 'content', 'admin', 0, sysdate);
+select* from sign;
+

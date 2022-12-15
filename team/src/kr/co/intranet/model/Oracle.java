@@ -15,6 +15,7 @@ public class Oracle {
 	
 	//Sign(결재)
 	public static final String SIGN_LIST_ALL = "select * from sign order by regdate desc";
+	public static final String SIGN_LIST_ONE = "select * from sign where sno=?";
 	public static final String SIGN_INSERT = "insert into sign(title, content) value(?, ?)";
 	
 	//Connection
