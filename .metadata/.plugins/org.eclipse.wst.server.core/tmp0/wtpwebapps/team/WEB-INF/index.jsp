@@ -14,26 +14,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login</title>
+	<jsp:include page="${path1 }/head.jsp" />
 </head>
 <body>
-	<div class="container">
-		<h2>로그인</h2>
-		<form action="main.do" method="post">
-			<table>
-				<tr>
-					<th><label for="email"><b>Email</b></label></th>
-					<td><input type="text" placeholder="Email" name="email" required></td>
-				</tr>
-				<tr>
-					<th><label for="pwd"><b>Password</b></label></th>
-					<td><input type="password" placeholder="Password" name="pwd" required></td>
-	        	</tr>
-	 		</table>
-	 	</form>
- 		<div>
-			<input type="checkbox" checked="checked" name="remember"> Remember
-   			<button type="submit">Login</button>
-   		</div>
- 	</div>
+	<section class="section">
+		<div class="container">
+			<h1 class="title">로그인</h1>
+			<form action="${path1 }/UserLoginCtrl.do" method="post">
+				<div class="table">
+					<input type="text" name="email" id="email" class="input is-info is-rounded " placeholder="이메일" required>
+					<input type="password" name="pw" id="pw" class="input is-info is-rounded " placeholder="비밀번호" required>
+				</div>
+				<div class="buttons">
+					<button type="submit" class="button is-primary">로그인</button>			
+				</div>
+			</form>				
+		</div>
+	</section>
 </body>
 </html>

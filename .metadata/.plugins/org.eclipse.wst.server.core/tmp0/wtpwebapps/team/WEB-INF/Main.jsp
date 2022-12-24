@@ -18,7 +18,11 @@
 </head>
 <body>
 	<jsp:include page="${path1 }/header.jsp" />
-	<h2>${user } test page</h2>
+	<section class="section">
+		<div class="container">
+			<h2>${sid }님 환영합니다.</h2>
+		</div>
+	</section>
 	<jsp:include page="${path1 }/footer.jsp" />
 </body>
 </html>

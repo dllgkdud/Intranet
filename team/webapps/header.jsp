@@ -6,6 +6,27 @@
 <c:set var="path2" value="${pageContext.request.contextPath }" />
 <div id="nav-group">
 	<div class="container">
-		<a href="${path2 }/GetSignListCtrl.do">전자결재</a>
+		<div class="navbar-end" id="tnb">
+			<%-- <c:if test="${empty sid }">
+				<a class="button is-primary" href="${path0 }/user/userAgree.jsp"><strong>회원가입</strong></a>
+	        </c:if> --%>
+	        <c:if test="${not empty sid }">
+				<a class="button is-light" href="${path0 }/UserLogoutCtrl.do">로그아웃</a>	        
+				<a class="button is-primary" href="${path0 }/UserInfoCtrl.do"><strong>인사정보</strong></a>
+				<c:if test='${sid.equals("admin@naver.com") }'>
+					<a class="button is-light" href="${path0 }/AdminCtrl.do">관리자</a>
+				</c:if>
+	        </c:if>
+		</div>
+		<div class="navbar-start" id="gnb">
+			<div class="navbar-item">
+				<a class="navbar-item" href="<%=request.getContextPath() %>/"><img src="#" alt=""></a>
+				<a href="#">전자메일</a>
+				<a href="${path2 }/GetSignListCtrl.do">전자결재</a>
+				<a href="#">게시판</a>
+				<a href="#">자료실</a>
+				<a href="#">예약서비스</a>
+			</div>
+		</div>
 	</div>
 </div>

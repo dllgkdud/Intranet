@@ -14,6 +14,20 @@ public class SignDTO {
 	//결재날짜
 	private String regdate;
 	
+	
+	public SignDTO() {}
+	public SignDTO(int sno, String title, String content, String sid,
+			int state, String regdate) {
+		super();
+		this.sno = sno;
+		this.title = title;
+		this.content = content;
+		this.sid = sid;
+		this.state = state;
+		this.regdate = regdate;
+	}
+	
+	
 	//Getter&Setter
 	public int getSno() {
 		return sno;

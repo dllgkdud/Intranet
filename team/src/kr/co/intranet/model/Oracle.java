@@ -13,10 +13,11 @@ public class Oracle {
 	static final String USER = "system";
 	static final String PASS = "1234";
 	
-	//Sign(결재)
-	public static final String SIGN_LIST_ALL = "select * from sign order by regdate desc";
-	public static final String SIGN_LIST_ONE = "select * from sign where sno=?";
-	public static final String SIGN_INSERT = "insert into sign(title, content) value(?, ?)";
+	//Main(로그인)
+	public static final String USER_ID_CHECK = "select * from emp where email=?";
+	
+	//Sign(전자결재)
+	public static final String SIGN_SELECT_ALL = "select * fron sign";
 	
 	//Connection
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
