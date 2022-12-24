@@ -4,3 +4,37 @@
 1671420558932	Rename resource 'index.html'
 1671420626014	Move 'index.jsp' to 'WEB-INF'
 1671420657582	Delete element
+1671442548118	Delete element
+1671442551161	Delete element
+1671442573230	Delete element
+1671442576383	Delete element
+1671442580861	Delete element
+1671442583411	Delete element
+1671442591542	Delete element
+1671442594211	Delete element
+1671442596026	Delete element
+1671442598646	Delete element
+1671442599885	Delete element
+1671442601044	Delete element
+1671442605638	Delete element
+1671442607668	Delete element
+1671442621830	Delete element
+1671442625674	Delete element
+1671442627253	Delete element
+1671442628903	Delete element
+1671442631147	Delete element
+1671442632559	Delete element
+1671442642658	Delete element
+1671764020106	Rename resource 'boardlist.jsp'
+1671852354661	Delete element
+1671852718394	Rename compilation unit 'GetNoticeListCtrl.java'
+1671854838921	Move 'board' to 'WEB-INF'
+1671859966670	Rename type 'AddBoardCtrl'
+1671860687005	Rename resource 'boardWrite.jsp'
+1671864518876	Rename compilation unit 'GetNoticeCtrl.java'
+1671865049087	Rename resource 'noticeDetail.jsp'
+1671870306014	Rename type 'GetUserListCtrl'
+1671870994923	Rename resource 'userList.jsp'
+1671871466228	Rename resource 'userDetail.jsp'
+1671871564140	Rename type 'GetUserDetailCtrl'
+1671872194380	Rename type 'DelNoticeCtrl'

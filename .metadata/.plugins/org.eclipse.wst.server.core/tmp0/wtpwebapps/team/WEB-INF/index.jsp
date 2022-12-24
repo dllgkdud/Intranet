@@ -4,7 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="path1" value="${request.getContextPath() }" />
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +17,13 @@
 	
 </head>
 <body>
-
-	<h2> email test page </h2>
+	<h1>test page</h1>
+	<h2> email </h2>
 	<a href="./send/email.jsp">온라인상담</a>
+	<h2> board </h2>
+	<a href="<%=request.getContextPath() %>/GetBoardListCtrl.do">게시판 목록</a>
+	<h2> member </h2>
+	<a href="<%=request.getContextPath() %>/GetMemberListCtrl.do">회원 목록</a>
+	
 </body>
 </html>

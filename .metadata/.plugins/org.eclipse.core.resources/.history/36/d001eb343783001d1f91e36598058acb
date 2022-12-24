@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path1" value="${request.getContextPath() }" />
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>email</title>
+	<jsp:include page="${path1 }/head.jsp" />
+	
+</head>
+<body>
+
+	<h2> email test page </h2>
+	<a href="./send/email.jsp">온라인상담</a>
+</body>
+</html>
