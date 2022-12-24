@@ -24,12 +24,12 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th><abbr title="Sno"></abbr></th>
-						<th><abbr title="Title"></abbr></th>
-						<th><abbr title="Content"></abbr></th>
-						<th><abbr title="Sid"></abbr></th>
-						<th><abbr title="State"></abbr></th>
-						<th><abbr title="RegDate"></abbr></th>
+						<th><abbr title="Sno">번호</abbr></th>
+						<th><abbr title="Title">제목</abbr></th>
+						<th><abbr title="Content">내용</abbr></th>
+						<th><abbr title="Sid">결재자</abbr></th>
+						<th><abbr title="State">결재상태</abbr></th>
+						<th><abbr title="RegDate">결재일</abbr></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -45,6 +45,17 @@
 							</c:if>
 						</td>
 						<td>${dto.sid }</td>
+						<td>
+							<c:if test='${dto.state==0 }'>
+								<span>결재처리</span>
+							</c:if>
+							<c:if test='${dto.state==1 }'>
+								<span>결재진행</span>
+							</c:if>
+							<c:if test='${dto.state==2 }'>
+								<span>결재완료</span>
+							</c:if>
+						</td>
 						<td>
 							<fmt:parseDate value="${dto.regDate }" var="regdate" pattern="yyyy-MM-dd"></fmt:parseDate>
 							<fmt:formatDate value="${regdate }" pattern="yyyy-MM-dd" />

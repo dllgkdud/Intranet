@@ -5,18 +5,19 @@ create table sign (
     sno number primary key ,
     title varchar2(100),
 	content varchar2(1000),
-	sid varchar2(50),
+	email varchar2(100),
 	state number default 0,
 	regdate date default sysdate
 );
 select* from sign;
+drop table sign cascade CONSTRAINTS;
 
 -- sno 자동 증가 시퀀스 생성
 create sequence sseq start with 1 increment by 1;
 drop sequence sseq;
 
 -- dummy
-insert into sign values(sseq.nextval, 'title', 'content', 'admin', 0, sysdate);
+insert into sign values(sseq.nextval, '결재부탁드립니다.', '결재내용 수정사항입니다. 대리님. 이후 추가사항 있으시면 답변부탁드립니다.', 'admin@naver.com', 0, sysdate);
 
 
 -- 로그인 겸 사원테이블(사원번호, 이메일, 비밀번호, 이름, 부서번호, 생일, 입사일)

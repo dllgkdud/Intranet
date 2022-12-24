@@ -14,7 +14,7 @@ public class Oracle {
 	static final String PASS = "1234";
 	
 	//Main(로그인)
-	public static final String USER_ID_CHECK = "select * from emp where email=?";
+	public static final String USER_LOGIN = "select * from emp where email=? and pw=?";
 	
 	//Sign(전자결재)
 	public static final String SIGN_SELECT_ALL = "select * fron sign";

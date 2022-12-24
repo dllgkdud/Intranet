@@ -21,10 +21,11 @@ public class GetMainCtrl extends HttpServlet {
 		//전역변수
 		HttpSession session = request.getSession();
 		String email = (String) session.getAttribute("sid");
+		String pw = (String) session.getAttribute("pw");
 		
 		//DAO에서 목록 호출/반환
 		MemberDAO dao = new MemberDAO();
-		MemberDTO dto = dao.Main(email);
+		MemberDTO dto = dao.Main(email, pw);
 		
 		//DAO에서 받은 데이터 view로 디스패치
 		request.setAttribute("dto", dto);

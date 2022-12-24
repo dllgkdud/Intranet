@@ -21,8 +21,9 @@ public class MemberDAO {
 		
 		try {	
 			con = Oracle.getConnection();			
-			pstmt = con.prepareStatement(Oracle.USER_ID_CHECK);
+			pstmt = con.prepareStatement(Oracle.USER_LOGIN);
 			pstmt.setString(1, email);
+			pstmt.setString(2, pw);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -50,12 +51,13 @@ public class MemberDAO {
 		return cnt;
 	}
 
-	public MemberDTO Main(String email) {
+	public MemberDTO Main(String email, String pw) {
 		MemberDTO dto = new MemberDTO();
 		try {	
 			con = Oracle.getConnection();			
-			pstmt = con.prepareStatement(Oracle.USER_ID_CHECK);
+			pstmt = con.prepareStatement(Oracle.USER_LOGIN);
 			pstmt.setString(1, email);
+			pstmt.setString(2, pw);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {

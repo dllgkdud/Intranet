@@ -27,8 +27,7 @@ public class SignDAO {
 				SignDTO dto = new SignDTO();
 				dto.setSno(rs.getInt("sno"));
 				dto.setTitle(rs.getString("title"));
-				dto.setContent(rs.getString("content"));
-				dto.setSid(rs.getString("sid"));
+				dto.setEmail(rs.getString("email"));
 				dto.setState(rs.getInt("state"));
 				dto.setRegdate(rs.getString("regdate"));
 				signList.add(dto);
@@ -45,6 +44,6 @@ public class SignDAO {
 		} finally {
 			Oracle.close(rs, pstmt, con);
 		}
-		return null;
+		return signList;
 	}
 }

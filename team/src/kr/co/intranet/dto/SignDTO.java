@@ -8,7 +8,7 @@ public class SignDTO {
 	//결재내용
 	private String content;
 	//결재자
-	private String sid;
+	private String email;
 	//결재상태(현황)
 	private int state;
 	//결재날짜
@@ -16,13 +16,13 @@ public class SignDTO {
 	
 	
 	public SignDTO() {}
-	public SignDTO(int sno, String title, String content, String sid,
+	public SignDTO(int sno, String title, String content, String email,
 			int state, String regdate) {
 		super();
 		this.sno = sno;
 		this.title = title;
 		this.content = content;
-		this.sid = sid;
+		this.email = email;
 		this.state = state;
 		this.regdate = regdate;
 	}
@@ -47,11 +47,11 @@ public class SignDTO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getSid() {
-		return sid;
+	public String getEmail() {
+		return email;
 	}
-	public void setSid(String sid) {
-		this.sid = sid;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public int getState() {
 		return state;
