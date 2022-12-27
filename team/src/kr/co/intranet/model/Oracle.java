@@ -17,7 +17,11 @@ public class Oracle {
 	public static final String USER_LOGIN = "select * from emp where email=? and pw=?";
 	
 	//Sign(전자결재)
-	public static final String SIGN_SELECT_ALL = "select * fron sign";
+	public static final String SIGN_SELECT_ALL = "select * from sign";
+	public static final String SIGN_SELECT_ONE = "select * from sign where sno=?";
+	public static final String SIGN_INSERT = "insert into sign values(sseq.nextval, ?, ?, ?, 0, sysdate)";
+	public static final String SIGN_DELETE = "delete from sign where sno=?";
+	public static final String SIGN_UPDATE = "update sign set title=?, content=? where sno=?";
 	
 	//Connection
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {

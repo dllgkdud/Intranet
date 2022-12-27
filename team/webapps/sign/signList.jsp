@@ -5,8 +5,8 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<%-- <c:set var="path1" value="<%=request.getContextPath() %>" /> --%>
-<c:set var="path1" value="${request.getContextPath() }" />
+<c:set var="path1" value="<%=request.getContextPath() %>" />
+<%-- <c:set var="path1" value="${request.getContextPath() }" /> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +24,8 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th><abbr title="Sno">번호</abbr></th>
-						<th><abbr title="Title">제목</abbr></th>
+						<th><abbr title="Sno">결재번호</abbr></th>
+						<th><abbr title="Title">결재제목</abbr></th>
 						<th><abbr title="Email">결재자</abbr></th>
 						<th><abbr title="State">결재상태</abbr></th>
 						<th><abbr title="RegDate">결재일</abbr></th>
@@ -34,16 +34,16 @@
 				<tbody>
 					<c:forEach items="${signList }" var="dto" varStatus="no">
 					<tr>
-						<td><span>${dto.no }</span></td>
+						<td><span>${dto.sno }</span></td>
 						<td>
 							<c:if test='${empty sid }'>
 								<span>${dto.title }</span>
 							</c:if>
 							<c:if test='${sid.equals(dto.email) || sid.equals("admin@naver.com")}'>
-								<a href="${path1 }/GetSignDetailCtrl.do?no=${dto.sno }">${dto.title }</a>
+								<a href="${path1 }/GetSignDetailCtrl.do?sno=${dto.sno }">${dto.title }</a>
 							</c:if>
 						</td>
-						<td>${dto.sid }</td>
+						<td>${dto.email }</td>
 						<td>
 							<c:if test='${dto.state==0 }'>
 								<span>결재처리</span>
@@ -57,6 +57,7 @@
 						</td>
 						<td>
 							<fmt:parseDate value="${dto.regdate }" var="regdate" pattern="yyyy-MM-dd"></fmt:parseDate>
+							<fmt:formatDate value="${regdate }" pattern="yyyy-MM-dd" />
 						</td>
 					</tr>
 					</c:forEach>
@@ -64,7 +65,7 @@
 			</table>
 			<c:if test='${not empty sid}'>
 			<div class="buttons">
-				<a href="#" class="button is-primary">작성</a>
+				<a href="${path1 }/sign/addSign.jsp" class="button is-primary">작성</a>
 			</div>
 			</c:if>
 		</div>

@@ -9,7 +9,7 @@ create table sign (
 	state number default 0,
 	regdate date default sysdate
 );
-select* from sign;
+select* from sign where sno=1;
 drop table sign cascade CONSTRAINTS;
 
 -- sno 자동 증가 시퀀스 생성
