@@ -3,18 +3,18 @@ create table member(
     pw varchar(300) not null,
     name varchar(50) not null,
     tel varchar(13),
-    addr varchar(150),
     email varchar(100),
+    addr varchar(150),
     regdate date default sysdate
 );
 desc member;
 select * from member;
 drop table member;
 
-insert into member values('admin','1111','관리자','010-1111-1111','서울','admin@intranet.com',sysdate);
-insert into member values('hsy','1234','한시연','010-1234-1234','인천','hsy@intranet.com',sysdate);
-insert into member values('ihy','5678','이하영','010-5678-5678','김포','hsy@intranet.com',sysdate);
-insert into member values('hth','9101','한태헌','010-9101-9101','파주','hsy@intranet.com',sysdate);
+insert into member values('admin','1111','관리자','010-1111-1111','admin@intranet.com','서울',sysdate);
+insert into member values('hsy','1234','한시연','010-1234-1234','hsy@intranet.com','인천',sysdate);
+insert into member values('ihy','5678','이하영','010-5678-5678','ihy@intranet.com','김포',sysdate);
+insert into member values('hth','9101','한태헌','010-9101-9101','hth@intranet.com','파주',sysdate);
 
 create table board(
     no int primary key,

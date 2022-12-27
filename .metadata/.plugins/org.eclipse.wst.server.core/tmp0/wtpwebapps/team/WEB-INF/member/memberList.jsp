@@ -6,11 +6,11 @@
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
 <c:set var="path1" value="<%=request.getContextPath() %>" />
-<c:set var="path1" value="${pageContext.request.contextPath }" /> 
+<%-- <c:set var="path1" value="${pageContext.request.contextPath }" /> --%> 
 <!DOCTYPE html>
 <html>
  <head>
-   <meta charset="utf-8">
+   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>회원 목록</title>
    <jsp:include page="/head.jsp" />
@@ -34,11 +34,11 @@
 			   <c:forEach items="${list }" var="dto" varStatus="status">
 			    <tr>
 			      <td>${status.count }</td>
-			      <td><a href="${path1 }/GetUserDetailCtrl.do?id=${dto.id }">${dto.id }</a></td>
-			      <td><a href="${path1 }/GetUserDetailCtrl.do?id=${dto.id }">${dto.name }</a></td>
+			      <td><a href="${path1 }/GetMemberDetailCtrl.do?id=${dto.id }">${dto.id }</a></td>
+			      <td><a href="${path1 }/GetMemberDetailCtrl.do?id=${dto.id }">${dto.name }</a></td>
 			      <td>
-			      	<fmt:parseDate value="${dto.regdate }" var="regdate" pattern="yyyy-MM-dd HH:mm:ss" />
-			      	<fmt:formatDate value="${reg }" pattern="yyyy-MM-dd" />
+			      	<fmt:parseDate value="${dto.regdate }" var="reg" pattern="yyyy-MM-dd HH:mm:ss" />
+			    	<fmt:formatDate value="${reg }" pattern="yyyy-MM-dd" />
 			    </tr>
 			    </c:forEach>
 				<c:if test="${empty list }">

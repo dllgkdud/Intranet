@@ -21,12 +21,11 @@ public class GetMemberDetailCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
-		String id = (String) request.getParameter("id");
+		String id = (String) request.getParameter ("id");
 		
 		MemberDAO dao = new MemberDAO();
 		MemberDTO dto = dao.memberInfo(id);
 		
-		//dao로 부터 받은 데이터를 view에 디스패치함
 		request.setAttribute("dto", dto);
 		
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/member/memberDetail.jsp");
