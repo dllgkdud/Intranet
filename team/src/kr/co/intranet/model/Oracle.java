@@ -23,6 +23,12 @@ public class Oracle {
 	public static final String SIGN_DELETE = "delete from sign where sno=?";
 	public static final String SIGN_UPDATE = "update sign set title=?, content=? where sno=?";
 	
+	//Board(공지사항)
+	public static final String BOARD_SELECT_ALL = "select * from bboard";
+	public static final String BOARD_SELECT_ONE = "select * from bboard where no=?";
+	public static final String BOARD_WRITE = "insert into bboard values(nseq.nextval, ?, ?, ?, sysdate)";
+	public static final String BOARD_DELETE = "delete from bboard where no=?";
+	
 	//Connection
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DRIVER);

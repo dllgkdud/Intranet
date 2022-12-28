@@ -14,10 +14,11 @@
 <fullyQualifiedTypeName name="kr.co.intranet.model.SignDAO"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="kr.co.intranet.util.AES256"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="kr.co.intranet.dto.MemberDTO"/>
 <fullyQualifiedTypeName name="kr.co.intranet.model.MemberDAO"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="javax.mail.Authenticator"/>
 </qualifiedTypeNameHistroy>

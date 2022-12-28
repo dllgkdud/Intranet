@@ -54,3 +54,21 @@ select * from dept;
 
 -- dummy
 insert into dept values(100, '인사부', '사원');
+
+-- 공지테이블(공지번호, 제목, 내용, 작성자, 작성일)
+create table bboard(
+    no int primary key,
+    title varchar(200) not null,
+    content varchar(1000) not null,
+    email varchar(100) not null,
+    regdate date default sysdate
+);
+
+desc bboard;
+select * from bboard;
+drop table bboard;
+
+create sequence nseq increment by 1 start with 1;
+drop sequence nseq;
+
+insert into bboard values(nseq.nextval,'제목1','내용1','admin@naver.com',sysdate);

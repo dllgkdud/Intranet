@@ -23,7 +23,7 @@
 				<a class="navbar-item" href="<%=request.getContextPath() %>/"><img src="#" alt=""></a>
 				<a href="#">전자메일</a>
 				<a href="${path2 }/GetSignListCtrl.do">전자결재</a>
-				<a href="#">게시판</a>
+				<a href="${path2 }/GetBoardListCtrl.do">게시판</a>
 				<a href="#">자료실</a>
 				<a href="#">예약서비스</a>
 			</div>
