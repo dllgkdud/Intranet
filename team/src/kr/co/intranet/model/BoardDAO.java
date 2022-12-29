@@ -74,7 +74,7 @@ public class BoardDAO {
 		return dto;
 	}
 	
-	//AddBoard [글 작성]
+	//WriteBoard [글 작성]
 	public int writeBoard(BoardDTO dto){
 		int cnt = 0;
 		try {

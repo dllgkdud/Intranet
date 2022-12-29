@@ -14,7 +14,7 @@ public class MemberDAO {
 	private ResultSet rs = null;
 
 	
-	//회원가입
+	//JoinMember [회원가입]
 	public int joinMember(MemberDTO member){
 	 int cnt = 0;
 	 try {
@@ -60,6 +60,25 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+	
+	//중복 이메일 체크 
+		public int emailCheckPro(String email){
+			int cnt = 0;
+			try {
+				con = Maria.getConnection();
+				pstmt = con.prepareStatement(Maria.MEMBER_EMAIL_CHECK);
+				pstmt.setString(1, email);
+				rs = pstmt.executeQuery();
+				if(rs.next()){ cnt = cnt + 1;	} else { cnt = 0;	}
+			} catch(ClassNotFoundException e){
+				System.out.println("드라이버 로딩 실패");
+			} catch(Exception e){
+				System.out.println("SQL 구문이 처리되지 못했거나 연산이 잘못되었습니다.");
+			} finally {
+				Maria.close(rs, pstmt, con);
+			}
+			return cnt;
+		}
 
 	//MemberList [회원 목록]
 	public ArrayList<MemberDTO> getMemberList() {
@@ -97,7 +116,7 @@ public class MemberDAO {
 		}
 		
 	
-		//MemberInfo [회원 정보] 
+		//MemberInfo [회원 정보 상세보기] 
 		public MemberDTO memberInfo(String id){
 			MemberDTO dto = new MemberDTO();
 			
@@ -128,5 +147,29 @@ public class MemberDAO {
 			}
 			return dto;
 		}
+		
+		//회원 탈퇴 [OutMember]
+			public int outMember(String id) {
+			int cnt = 0;
+			try {
+				con = Maria.getConnection();
+				pstmt = con.prepareStatement(Maria.MEMBER_OUT);
+				pstmt.setString(1, id);
+				cnt = pstmt.executeUpdate();
+			} catch(ClassNotFoundException e){
+				System.out.println("드라이버 로딩 실패");
+				e.printStackTrace();
+			} catch(SQLException e){
+				System.out.println("SQL 구문이 처리되지 못했습니다.");
+				e.printStackTrace();
+			} catch(Exception e){
+				System.out.println("잘못된 연산 및 요청으로 인해 목록을 불러오지 못했습니다.");
+			} finally {
+				Maria.close(pstmt, con);
+			}
+			return cnt;
+		}
+		
+
 }
 

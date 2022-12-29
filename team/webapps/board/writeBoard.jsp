@@ -33,7 +33,7 @@
 			<div class="buttons">
 			  <button type="submit" class="button">등록</button>
 			  <button type="reset" class="button">취소</button>
-			  <button><a href="${path1 }/GetBoardListCtrl.do" class="button">목록</a></button>
+			  <a href="${path1 }/GetBoardListCtrl.do" class="button">목록</a>
 			</div>
 		</form>
     </div>

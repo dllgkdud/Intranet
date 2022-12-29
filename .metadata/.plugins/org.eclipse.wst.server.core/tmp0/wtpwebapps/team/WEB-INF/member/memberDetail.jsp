@@ -53,9 +53,8 @@
 		</table>
 		<div class="button">
 		  <a href="${path1 }/GetMemberListCtrl.do" class="button">목록</a>
-		</div>
-		<div class="button">
-		  <a href="${path1 }/MemberInfoCtrl.do" class="button">회원 수정</a>
+		  <a href="${path1 }/MemberInfoCtrl.do?id=${dto.id}" class="button">회원 수정</a>		
+		  <a href="${path1 }/OutMemberCtrl.do?id=${dto.id}" class="button">회원 탈퇴</a>
 		</div>
     </div>
   </section>

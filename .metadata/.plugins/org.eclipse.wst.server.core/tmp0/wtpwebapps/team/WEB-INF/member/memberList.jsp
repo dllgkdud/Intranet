@@ -48,6 +48,7 @@
 			    </c:if>
 			  </tbody>
 			</table>
+				<a href="./member/joinMember.jsp">회원 가입</a>
 		</div>
 	</div>
  </section>

@@ -14,14 +14,16 @@ public class Maria {
 	    static final String PW = "1234";
 	    
 	    //Member 
-	    final static String MEMBER_JOIN = "insert into user(id, pw, name, tel, email, addr, regdate) values (?,?,?,?,?,?,?)";
+	    final static String MEMBER_JOIN = "insert into member(id, pw, name, tel, email, addr) values (?,?,?,?,?,?)";
 	    final static String MEMBER_ID_CHECK = "select * from member where id=?";
+	    final static String MEMBER_EMAIL_CHECK ="select * from member where email=?";
 	    final static String MEMBER_SELECT_ALL = "select * from member";
 	    final static String MEMBER_SELECT_ONE = "select * from member where id=?";
-
+	    final static String MEMBER_OUT = "delete from member where id=?";
+	    
 	    //Board
 	    final static String BOARD_SELECT_ALL = "select * from board";
-	    final static String BOARD_WRITE = "insert into board(title, content) values (?,?)"; //sql구문 오류 -> 작성자 정보가 없어서 그런듯 
+	    final static String BOARD_WRITE = "insert into board(title, content) values (?,?)"; //sql구문 오류 -> 로그인 정보가 없어서 그런듯 
 	    final static String BOARD_SELECT_ONE = "select * from board where no=?";
 	    final static String BOARD_DELETE = "delete from board where no=?";
 	    

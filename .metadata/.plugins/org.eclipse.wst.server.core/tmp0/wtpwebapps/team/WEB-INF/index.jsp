@@ -24,6 +24,7 @@
 	<a href="<%=request.getContextPath() %>/GetBoardListCtrl.do">게시판 목록</a>
 	<h2> member </h2>
 	<a href="<%=request.getContextPath() %>/GetMemberListCtrl.do">회원 목록</a>
-	
+	<h2> JoinMember </h2>
+	<a href="./member/joinMember.jsp">회원 가입</a>
 </body>
 </html>

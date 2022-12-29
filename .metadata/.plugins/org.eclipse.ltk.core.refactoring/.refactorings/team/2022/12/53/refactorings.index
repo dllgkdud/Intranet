@@ -1,3 +1,17 @@
 1672029876045	Delete element
 1672034109090	Delete element
 1672035789149	Rename type 'UserInfoCtrl'
+1672119966738	Rename type 'AddUserCtrl'
+1672121810176	Rename resource 'user'
+1672121824003	Delete element
+1672121831503	Delete element
+1672121833363	Delete element
+1672121839484	Delete element
+1672121840983	Delete element
+1672121842394	Delete element
+1672121851481	Rename resource 'addUser.jsp'
+1672121886275	Delete element
+1672121894412	Rename resource 'signUp.jsp'
+1672218697682	Copy compilation unit
+1672226805331	Rename type 'DeleteMemberCtrl'
+1672231600390	Copy compilation unit

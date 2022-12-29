@@ -29,7 +29,7 @@ public class MemberInfoCtrl extends HttpServlet {
 
 		request.setAttribute("dto", dto);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/user/userUpdate.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/member/memberUpdate.jsp");
 		view.forward(request, response);
 		
 	}

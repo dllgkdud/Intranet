@@ -38,3 +38,8 @@ insert into board values(nseq.nextval,'제목4','내용4','admin',sysdate);
 
 
 commit
+
+create table email(
+	
+)
+
