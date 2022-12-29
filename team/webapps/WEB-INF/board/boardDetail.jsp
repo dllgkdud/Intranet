@@ -34,7 +34,7 @@
 		    </tr>
 		    <tr>
 		      <th>작성자</th>
-		      <td><p>${dto.author}</p></td>
+		      <td><p>${dto.id}</p></td>
 		    </tr>
 		    <tr> 
 		      <th>작성일</th>

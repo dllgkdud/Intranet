@@ -25,6 +25,7 @@
 	    <tr>
 	      <th><abbr title="No">No</abbr></th>
 	      <th><abbr title="Title">Title</abbr></th>
+	      <th><abbr title="Id">Id</abbr></th>
 	      <th><abbr title="Result">Regdate</abbr></th>
 	    </tr>
 	  </thead>
@@ -32,7 +33,8 @@
 	   <c:forEach items="${list }" var="dto" varStatus="status">
 	    <tr>
 	      <td>${status.count }</td> 
-	      <td><a href="${path1 }/GetBoardCtrl.do?no=${dto.no }">${dto.title }</a></td>
+	      <td><a href="${path1 }/GetBoardDetailCtrl.do?no=${dto.no }">${dto.title }</a></td>
+	      <td><a href="${path1 }/GetBoardDetailCtrl.do?no=${dto.no }">${dto.id }</a></td>
 	      <td>
 	      	<fmt:parseDate value="${dto.regdate }" var="regdate" pattern="yyyy-MM-dd HH:mm:ss" />
 	      	<fmt:formatDate value="${regdate }" pattern="yyyy-MM-dd" />

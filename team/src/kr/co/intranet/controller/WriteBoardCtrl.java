@@ -20,12 +20,16 @@ public class WriteBoardCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
+		int no = Integer.parseInt(request.getParameter("no"));
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
+		String id = request.getParameter("id");
 		
 		BoardDTO dto = new BoardDTO();
+		dto.setNo(no);
 		dto.setTitle(title);
 		dto.setContent(content);
+		dto.setId(id);
 		
 		BoardDAO dao = new BoardDAO();
 		int cnt = dao.writeBoard(dto);

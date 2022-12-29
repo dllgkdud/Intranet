@@ -15,3 +15,31 @@
 1672218697682	Copy compilation unit
 1672226805331	Rename type 'DeleteMemberCtrl'
 1672231600390	Copy compilation unit
+1672291642845	Rename resource 'email.jsp'
+1672291872066	Rename resource 'emailPro.jsp'
+1672291890337	Rename resource 'sendemailPro.jsp'
+1672293311419	Move 'sendEmail.jsp' to 'email'
+1672293313547	Move 'sendEmailPro.jsp' to 'email'
+1672293316881	Delete element
+1672294013475	Copy compilation unit
+1672294370356	Rename compilation unit 'WriteEmailCtrl.java'
+1672294429504	Copy compilation unit
+1672294511043	Copy folder
+1672294519736	Rename resource 'memberDetail.jsp'
+1672294525599	Rename resource 'memberList.jsp'
+1672296252712	Rename type 'GetEmailListCtrl'
+1672296290311	Rename compilation unit 'GetSendEmailListCtrl.java'
+1672299903770	Rename type 'GetEmailListCtrl'
+1672300243764	Copy compilation unit
+1672300526838	Rename type 'GetBoardDetailCtrl'
+1672300541737	Rename type 'GetMemDetailCtrl'
+1672300583109	Rename compilation unit 'GetMemberDetailCtrl.java'
+1672300593141	Rename type 'GetBoardDetailCtrl'
+1672300604009	Rename compilation unit 'GetbboMemberDetailCtrl.java'
+1672301220960	Copy compilation unit
+1672301335900	Rename resource 'emailDetail.jsp'
+1672301344606	Rename resource 'emailList.jsp'
+1672302241349	Copy compilation unit
+1672302251931	Rename type 'GetEmailCtrl'
+1672302333207	Delete element
+1672306931484	Delete element

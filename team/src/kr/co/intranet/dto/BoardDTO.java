@@ -4,7 +4,7 @@ public class BoardDTO {
 	private int no;
 	private String title;
 	private String content;
-	private String author;
+	private String id;
 	private String regdate;
 	
 	public int getNo() {
@@ -25,11 +25,11 @@ public class BoardDTO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getAuthor() {
-		return author;
+	public String getId() {
+		return id;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getRegdate() {
 		return regdate;

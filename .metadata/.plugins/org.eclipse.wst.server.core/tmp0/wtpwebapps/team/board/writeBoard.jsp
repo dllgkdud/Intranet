@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>게시판 글 작성</title>
     <jsp:include page="/head.jsp" />
@@ -20,6 +20,9 @@
       	<form action="${path1 }/WriteBoardCtrl.do" method="post">
 			<table class="table">
 			   <tbody>
+				<tr>	   	
+		      	<td><input type="hidden" name="no" id="no" value="100" />
+				</tr>
 			    <tr>
 			      <th><label for="title">제목</label></th>
 			      <td><input type="text" class="input" maxlength="120" name="title" id="title" placeholder="제목 입력" required /></td>
@@ -28,6 +31,9 @@
 			      <th><label for="content">내용</label></th>
 			      <td><textarea rows="8" cols="100" name="content" id="content" class="textarea" placeholder="내용 입력" required></textarea></td>
 			    </tr>
+			    	<tr>	   	
+		      	<td><input type="hidden" name="id" id="id" value="admin" />
+				</tr>
 			  </tbody>
 			</table>
 			<div class="buttons">

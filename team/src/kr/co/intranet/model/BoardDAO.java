@@ -26,7 +26,7 @@ public class BoardDAO {
 				dto.setNo(rs.getInt("no"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
-				dto.setAuthor(rs.getString("author"));
+				dto.setId(rs.getString("id"));
 				dto.setRegdate(rs.getString("regdate"));
 				boardList.add(dto);
 			}
@@ -56,7 +56,7 @@ public class BoardDAO {
 				dto.setNo(rs.getInt("no"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
-				dto.setAuthor(rs.getString("author"));
+				dto.setId(rs.getString("id"));
 				dto.setRegdate(rs.getString("regdate"));
 			}
 
@@ -117,6 +117,11 @@ public class BoardDAO {
 			Maria.close(pstmt, con);
 		}
 		return cnt;
+	}
+
+	public BoardDTO boardDetail(String id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

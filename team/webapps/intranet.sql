@@ -20,7 +20,7 @@ create table board(
     no int primary key,
     title varchar(200) not null,
     content varchar(1000) not null,
-    author varchar(20) not null,
+    id varchar(20) not null,
     regdate date default sysdate
 );
 
@@ -36,10 +36,26 @@ insert into board values(nseq.nextval,'제목2','내용2','admin',sysdate);
 insert into board values(nseq.nextval,'제목3','내용3','admin',sysdate);
 insert into board values(nseq.nextval,'제목4','내용4','admin',sysdate);
 
+insert into board(no, title, content,id) values (nseq.nextval,'제목5','내용5','admin');
 
 commit
 
+
+
 create table email(
-	
-)
+	no int primary key, 
+	id varchar(20) not null,
+    fr varchar(100) not null,		 -- fr = from -- 
+	tel varchar(13) not null,
+    title varchar(200) not null,
+    content varchar(1000) not null,
+    regdate date default sysdate
+);
+create sequence eseq increment by 1 start with 1;
+drop sequence eseq;
+drop table email;
+select * from email;
+
+insert into email values(eseq.nextval,'admin','admin@intranet.com','010-1111-1111','테스트 메일 1','테스트 메일 내용 1', sysdate);
+insert into email values(eseq.nextval,'admin','admin@intranet.com','010-1111-1111','테스트 메일 2','테스트 메일 내용 2', sysdate);
 

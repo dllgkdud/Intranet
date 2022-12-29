@@ -19,7 +19,8 @@
 <body>
 	<h1>test page</h1>
 	<h2> email </h2>
-	<a href="./send/email.jsp">온라인상담</a>
+	<a href="./email/sendEmail.jsp">메일 보내기</a>
+	<a href="<%=request.getContextPath() %>/GetSendEmailListCtrl.do">보낸 메일 목록</a>
 	<h2> board </h2>
 	<a href="<%=request.getContextPath() %>/GetBoardListCtrl.do">게시판 목록</a>
 	<h2> member </h2>

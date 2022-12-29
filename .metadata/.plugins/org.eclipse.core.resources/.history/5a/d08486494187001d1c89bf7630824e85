@@ -1,0 +1,6 @@
+package kr.co.intranet.dto;
+
+public class EmailDTO {
+	private String author();
+	
+}
