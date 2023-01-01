@@ -54,7 +54,7 @@ public class MemberDAO {
 	public MemberDTO Main(String email, String pw) {
 		MemberDTO dto = new MemberDTO();
 		try {	
-			con = Oracle.getConnection();			
+			con = Oracle.getConnection();
 			pstmt = con.prepareStatement(Oracle.USER_LOGIN);
 			pstmt.setString(1, email);
 			pstmt.setString(2, pw);
@@ -65,6 +65,7 @@ public class MemberDAO {
 				/*dto.setPw(AES256.decryptAES256(rs.getString("pw"), key));*/
 				dto.setPw(rs.getString("pw"));
 			}
+			
 		} catch(ClassNotFoundException e) {
 			System.out.println("드라이버 로딩에 실패했습니다.");
 			e.printStackTrace();
@@ -78,6 +79,34 @@ public class MemberDAO {
 			Oracle.close(rs, pstmt, con);
 		}
 		return dto;
+	}
+
+	public int writeMember(MemberDTO dto) {
+		int cnt = 0;
+		try {	
+			con = Oracle.getConnection();
+			pstmt = con.prepareStatement(Oracle.USER_ADD);
+			pstmt.setString(1, dto.getEmail());
+			pstmt.setString(2, dto.getPw());
+			pstmt.setString(3, dto.getEname());
+			pstmt.setString(4, dto.getDept());
+			pstmt.setString(5, dto.getPos());
+			pstmt.setString(6, dto.getBirth());
+			cnt = pstmt.executeUpdate();
+			
+		} catch(ClassNotFoundException e) {
+			System.out.println("드라이버 로딩에 실패했습니다.");
+			e.printStackTrace();
+		} catch(SQLException e) {
+			System.out.println("SQL구문이 정상적으로 처리되지 않았습니다.");
+			e.printStackTrace();
+		} catch(Exception e) {
+			System.out.println("잘못된 연산 및 요청으로 목록을 불러오지 못했습니다.");
+			e.printStackTrace();
+		} finally {
+			Oracle.close(pstmt, con);
+		}
+		return cnt;
 	}
 
 }

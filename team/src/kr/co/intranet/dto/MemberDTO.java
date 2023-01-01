@@ -5,20 +5,22 @@ public class MemberDTO {
     private String email;
     private String pw;
     private String ename;
-    private int deptno;
+    private String dept;
+    private String pos;
     private String birth;
     private String empdate;
     
     
     public MemberDTO() {}
 	public MemberDTO(int empno, String email, String pw, String ename,
-			int deptno, String birth, String empdate) {
+			String dept, String pos, String birth, String empdate) {
 		super();
 		this.empno = empno;
 		this.email = email;
 		this.pw = pw;
 		this.ename = ename;
-		this.deptno = deptno;
+		this.dept = dept;
+		this.pos = pos;
 		this.birth = birth;
 		this.empdate = empdate;
 	}
@@ -48,11 +50,17 @@ public class MemberDTO {
 	public void setEname(String ename) {
 		this.ename = ename;
 	}
-	public int getDeptno() {
-		return deptno;
+	public String getDept() {
+		return dept;
 	}
-	public void setDeptno(int deptno) {
-		this.deptno = deptno;
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+	public String getPos() {
+		return pos;
+	}
+	public void setPos(String pos) {
+		this.pos = pos;
 	}
 	public String getBirth() {
 		return birth;

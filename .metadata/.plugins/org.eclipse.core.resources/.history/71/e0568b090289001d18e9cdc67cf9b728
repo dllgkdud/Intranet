@@ -1,0 +1,49 @@
+package kr.co.intranet.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.co.intranet.dto.MemberDTO;
+import kr.co.intranet.model.MemberDAO;
+
+@WebServlet("/WriteMemberCtrl.do")
+public class WriteMemberCtrl extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		int empno = Integer.parseInt(request.getParameter("empno"));
+		String email = request.getParameter("email");
+		String pw = request.getParameter("pw");
+		String ename = request.getParameter("ename");
+		int dept = Integer.parseInt(request.getParameter("dept"));
+		String birth = request.getParameter("birth");
+		String empdate = request.getParameter("empdate");
+		
+		MemberDTO dto = new MemberDTO();
+		dto.setEmpno(empno);
+		dto.setEmail(email);
+		dto.setPw(pw);
+		dto.setEname(ename);
+		dto.setBirth(birth);
+		dto.setEmpdate(empdate);
+		
+		
+		MemberDAO dao = new MemberDAO();
+		int cnt = dao.writeMember(dto);
+		
+		if(cnt>=1){
+			response.sendRedirect("GetMemberListCtrl.do");
+		} else {
+			response.sendRedirect("./member/writeMember.jsp");
+		}
+	}
+}

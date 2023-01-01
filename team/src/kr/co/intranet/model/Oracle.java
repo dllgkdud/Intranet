@@ -29,6 +29,9 @@ public class Oracle {
 	public static final String BOARD_WRITE = "insert into bboard values(nseq.nextval, ?, ?, ?, sysdate)";
 	public static final String BOARD_DELETE = "delete from bboard where no=?";
 	
+	//Member(사원)
+	public static final String USER_ADD = "insert into emp values(emp_seq.nextval, ?, ?, ?, ?, ?, ?, sysdate)";
+	
 	//Connection
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DRIVER);

@@ -17,8 +17,8 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="kr.co.intranet.util.AES256"/>
 <fullyQualifiedTypeName name="kr.co.intranet.dto.MemberDTO"/>
-<fullyQualifiedTypeName name="kr.co.intranet.model.MemberDAO"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="javax.mail.Authenticator"/>
+<fullyQualifiedTypeName name="kr.co.intranet.model.MemberDAO"/>
 </qualifiedTypeNameHistroy>
