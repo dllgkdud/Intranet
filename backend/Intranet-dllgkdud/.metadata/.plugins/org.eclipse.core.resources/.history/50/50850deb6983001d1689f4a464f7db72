@@ -1,0 +1,11 @@
+package kr.co.intranet.dto;
+
+public class MemberDTO {
+	private int empno;
+    private String email;
+    private String pw;
+    private String ename;
+    private int deptno;
+    private String birth;
+    private String empdate;
+}

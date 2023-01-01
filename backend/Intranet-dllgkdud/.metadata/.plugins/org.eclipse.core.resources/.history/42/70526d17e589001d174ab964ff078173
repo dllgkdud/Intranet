@@ -1,0 +1,36 @@
+package kr.co.intranet.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.co.intranet.dto.DownBoardDTO;
+import kr.co.intranet.model.DownBoardDAO;
+
+
+@WebServlet("/DelDownBoardCtrl.do")
+public class DelDownBoardCtrl extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		int upno = Integer.parseInt(request.getParameter("upno"));
+		DownBoardDTO dto = new DownBoardDTO();
+		dto.setUpno(upno);
+		DownBoardDAO dao = new DownBoardDAO();
+		int cnt = dao.Delete(dto);
+		
+		if(cnt>=1){
+			response.sendRedirect("GetBoardListCtrl.do");
+		} else {
+			response.sendRedirect("GetBoardCtrl.do?no="+no);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package kr.co.intranet.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import kr.co.intranet.util.AES256;
+
+public class MemberDAO {
+	private Connection con = null;
+	private PreparedStatement pstmt = null;
+	private ResultSet rs = null;
+	String key = "%02x";
+	
+	
+
+}
