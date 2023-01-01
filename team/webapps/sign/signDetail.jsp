@@ -69,7 +69,7 @@
 			<div class="buttons">
 				<a href="${path1 }/GetSignListCtrl.do" class="button is-light">목록</a>
 				<a href="${path1 }/DelSignCtrl.do?sno=${vo.sno }" class="button is-light">삭제</a>
-				<a href="${path1 }/UpSignCtrl.do?sno=${vo.sno }" class="button is-primary">수정</a>
+				<a href="${path1 }/UpSignCtrl.do?sno=${vo.sno }" class="button is-primary">결재처리</a>
 			</div>
 		</div>
 	</section>

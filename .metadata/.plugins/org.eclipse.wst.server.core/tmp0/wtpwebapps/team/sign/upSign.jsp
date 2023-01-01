@@ -33,6 +33,16 @@
 							<th><label for="content">결재내용</label></th>
 							<td><textarea cols="100" rows="10" name="content" id="content" class="textarea is-info" maxlength="900" placeholder="내용" style="resize:none;" required>${dto.content }</textarea></td>
 						</tr>
+						<tr>
+							<th><label for="state">결재상황</label></th>
+							<td>
+								<select name="state" id="state">
+									<option value="0">결재처리</option>
+									<option value="1">결재진행</option>
+									<option value="2">결재완료</option>
+								</select>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 				<c:if test='${not empty sid}'>

@@ -137,7 +137,8 @@ public class SignDAO {
 			pstmt = con.prepareStatement(Oracle.SIGN_UPDATE);
 			pstmt.setString(1, dto.getTitle());
 			pstmt.setString(2, dto.getContent());
-			pstmt.setInt(3, dto.getSno());
+			pstmt.setInt(3, dto.getState());
+			pstmt.setInt(4, dto.getSno());
 			cnt = pstmt.executeUpdate();
 			
 		} catch(ClassNotFoundException e) {

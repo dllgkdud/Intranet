@@ -24,6 +24,7 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th><abbr title="Check"><input type="checkbox" id="cbx_chkAll" /></abbr></th>
 						<th><abbr title="Sno">결재번호</abbr></th>
 						<th><abbr title="Title">결재제목</abbr></th>
 						<th><abbr title="Email">결재자</abbr></th>
@@ -34,6 +35,7 @@
 				<tbody>
 					<c:forEach items="${signList }" var="dto" varStatus="no">
 					<tr>
+						<td><input type="checkbox" name="chk"></td>
 						<td><span>${dto.sno }</span></td>
 						<td>
 							<c:if test='${empty sid }'>
@@ -69,6 +71,28 @@
 			</div>
 			</c:if>
 		</div>
+		<script>
+          $(document).ready(function() {
+            $("#cbx_chkAll").click(function() {
+              if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
+              else $("input[name=chk]").prop("checked", false);
+            });
+
+            $("input[name=chk]").click(function() {
+              var total = $("input[name=chk]").length;
+              var checked = $("input[name=chk]:checked").length;
+
+              if(total != checked) $("#cbx_chkAll").prop("checked", false);
+              else $("#cbx_chkAll").prop("checked", true); 
+            });
+          });
+		</script>
+          <!-- 선택 항목만 처리하는 스크립트 -->
+          <script>
+          $(document).ready(function() {
+            
+          });
+		</script>
 	</section>
 	<jsp:include page="${path1 }/footer.jsp" />
 </body>

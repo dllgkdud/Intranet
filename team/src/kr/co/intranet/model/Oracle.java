@@ -21,7 +21,7 @@ public class Oracle {
 	public static final String SIGN_SELECT_ONE = "select * from sign where sno=?";
 	public static final String SIGN_INSERT = "insert into sign values(sseq.nextval, ?, ?, ?, 0, sysdate)";
 	public static final String SIGN_DELETE = "delete from sign where sno=?";
-	public static final String SIGN_UPDATE = "update sign set title=?, content=? where sno=?";
+	public static final String SIGN_UPDATE = "update sign set title=?, content=?, state=? where sno=?";
 	
 	//Board(공지사항)
 	public static final String BOARD_SELECT_ALL = "select * from bboard";

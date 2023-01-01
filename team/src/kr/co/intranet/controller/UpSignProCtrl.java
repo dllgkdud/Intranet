@@ -25,12 +25,14 @@ public class UpSignProCtrl extends HttpServlet {
 		int sno = Integer.parseInt(request.getParameter("sno"));
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
+		int state = Integer.parseInt(request.getParameter("state"));
 		
 		//DTO에 저장(데이터)
 		SignDTO dto = new SignDTO();
 		dto.setSno(sno);
 		dto.setTitle(title);
 		dto.setContent(content);
+		dto.setState(state);
 		
 		//DAO에 저장(데이터 저장값 반환할 때)
 		SignDAO dao = new SignDAO();

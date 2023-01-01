@@ -17,5 +17,19 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js" ></script>
 
 <style>
+#nav-group { height: 8rem; }
+.logo { width: 200px; height: inherit; }
+.logo img { width:80px; height:75px; margin-top: 20px; margin-left: 40px; }
+.nav-link { color: rgba(232, 230, 227, 0.5); }
 textarea { resize: none; }
+.sidebar .nav { padding-top: 0; }
+.frm { padding: 24px; width:1200px; margin:50px auto; }
+.sitemap_area { width: 960px; margin: 30px auto; }
+.menu { clear:both; padding-bottom: 100px; }
+.menu:after { content:""; display:block; clear:both; }
+.menu > li { float:left; width: 20%; }
+.menu > li > a.dp1 { display:block; line-height: 48px; font-size:20px; color:white; font-weight: bold; padding-top: 40px; }
+.menu .sub li { clear:both; padding-left: 16px; }
+.menu .sub li a { display:block; color:white; font-size:16px; line-height: 36px; }
+.menu .sub li a:hover { text-decoration: underline; color:deepskyblue; }
 </style>
