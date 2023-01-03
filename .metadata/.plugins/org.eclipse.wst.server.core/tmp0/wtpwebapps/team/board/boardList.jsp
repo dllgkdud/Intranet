@@ -13,10 +13,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>게시판 목록</title>
-   <jsp:include page="/head.jsp" />
+   <jsp:include page="${path1 }/head.jsp" />
  </head>
  <body>
- <jsp:include page="/header.jsp" />
+ <jsp:include page="${path1 }/header.jsp" />
  <section class="section">
    <div class="container">
      <h1 class="title">게시판 목록</h1>
@@ -50,6 +50,6 @@
 	</div>
    </div>
  </section>
- <jsp:include page="/footer.jsp"></jsp:include>
+ <jsp:include page="${path1 }/footer.jsp"></jsp:include>
   </body>
 </html>

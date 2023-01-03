@@ -3,16 +3,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<%@ page import="java.util.*, java.lang.*" %>
+<%@ page import="java.text.*, java.net.InetAddress" %>
 <c:set var="path1" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
- <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>게시판 글 작성</title>
     <jsp:include page="${path1 }/head.jsp" />
-  </head>
-  <body>
+</head>
+<body>
   <jsp:include page="${path1 }/header.jsp" />
   <section class="section">
     <div class="container">
@@ -39,5 +41,5 @@
     </div>
   </section>
   <jsp:include page="${path1 }/footer.jsp"></jsp:include>
-  </body>
+</body>
 </html>

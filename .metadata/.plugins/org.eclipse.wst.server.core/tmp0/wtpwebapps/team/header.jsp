@@ -20,7 +20,7 @@
                 <a class="nav-link" href="${path2 }/GetBoardListCtrl.do">게시판</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="board2.html">자료실</a>
+                <a class="nav-link" href="${path2 }/GetDownBoardList.do">자료실</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="${path2 }/WriteMemberCtrl.do">예약서비스</a>

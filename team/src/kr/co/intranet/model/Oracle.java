@@ -32,6 +32,13 @@ public class Oracle {
 	//Member(사원)
 	public static final String USER_ADD = "insert into emp values(emp_seq.nextval, ?, ?, ?, ?, ?, ?, sysdate)";
 	
+	//DownBoard(자료게시판)
+	public static final String SELECT_DOWNBAORD_ALL = "select * from downBoard";
+	public static final String INSERT_DOWNBOARD = "insert into downBoard values('upno_seq.nextval',?,?,?,sysdate)";
+	public static final String DELETE_DOWNBOARD = "delete from downBoard where upno=?";
+	
+	
+	
 	//Connection
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DRIVER);
